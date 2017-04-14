@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+mkdir -p /config/scripts/post-hooks.d
+sudo ln -fs /config/scripts/post-config.d/run-post-hooks /etc/commit/post-hooks.d
+run-parts --report --regex '^[a-zA-Z0-9._-]+$' /config/scripts/post-hooks.d
